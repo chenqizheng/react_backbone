@@ -54,6 +54,9 @@ class UserListView extends React.Component {
     }
 
     changeEditUser(val) {
+        if (this.state.editUser) {
+            this.state.editUser.isEdit = false;
+        }
         val.isEdit = true;
         this.setState({
             editUser: val
